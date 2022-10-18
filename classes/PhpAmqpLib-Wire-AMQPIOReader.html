@@ -114,10 +114,10 @@
 
     <article class="phpdocumentor-element -class">
         <h2 class="phpdocumentor-content__title">
-    AMQPReader
+    AMQPIOReader
 
         <span class="phpdocumentor-element__extends">
-        extends <a href="classes/PhpAmqpLib-Wire-AMQPByteStream.html"><abbr title="\PhpAmqpLib\Wire\AMQPByteStream">AMQPByteStream</abbr></a>
+        extends <a href="classes/PhpAmqpLib-Wire-AMQPReader.html"><abbr title="\PhpAmqpLib\Wire\AMQPReader">AMQPReader</abbr></a>
     </span>
     
             <div class="phpdocumentor-element__package">
@@ -131,9 +131,9 @@
     </h2>
 
         <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="PhpAmqpLib/Wire/AMQPReader.php"><a href="files/phpamqplib-wire-amqpreader.html"><abbr title="PhpAmqpLib/Wire/AMQPReader.php">AMQPReader.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="PhpAmqpLib/Wire/AMQPIOReader.php"><a href="files/phpamqplib-wire-amqpioreader.html"><abbr title="PhpAmqpLib/Wire/AMQPIOReader.php">AMQPIOReader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">9</span>
+    <span class="phpdocumentor-element-found-in__line">13</span>
 
     </aside>
 
@@ -258,12 +258,40 @@
 </dt>
 <dd></dd>
 
+            <dt class="phpdocumentor-table-of-contents__entry -property -protected">
+    <a href="classes/PhpAmqpLib-Wire-AMQPIOReader.html#property_timeout">$timeout</a>
+    <span>
+                &nbsp;: int|float|null            </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="classes/PhpAmqpLib-Wire-AMQPIOReader.html#property_io">$io</a>
+    <span>
+                &nbsp;: <a href="classes/PhpAmqpLib-Wire-IO-AbstractIO.html"><abbr title="\PhpAmqpLib\Wire\IO\AbstractIO">AbstractIO</abbr></a>            </span>
+</dt>
+<dd></dd>
+
                 <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/PhpAmqpLib-Wire-AMQPReader.html#method_close">close()</a>
+    <a href="classes/PhpAmqpLib-Wire-AMQPIOReader.html#method___construct">__construct()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/PhpAmqpLib-Wire-AMQPIOReader.html#method_close">close()</a>
     <span>
                         &nbsp;: void    </span>
 </dt>
 <dd>Close the byte stream.</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/PhpAmqpLib-Wire-AMQPIOReader.html#method_getTimeout">getTimeout()</a>
+    <span>
+                        &nbsp;: float|int|mixed|null    </span>
+</dt>
+<dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/PhpAmqpLib-Wire-AMQPReader.html#method_read">read()</a>
@@ -411,6 +439,13 @@ seconds since the Unix epoch in 1-second resolution.</dd>
 </dt>
 <dd>Reads the next value as the provided field type.</dd>
 
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/PhpAmqpLib-Wire-AMQPIOReader.html#method_setTimeout">setTimeout()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd>Sets the timeout (second)</dd>
+
             <dt class="phpdocumentor-table-of-contents__entry -method -protected">
     <a href="classes/PhpAmqpLib-Wire-AMQPByteStream.html#method_convertByteOrder">convertByteOrder()</a>
     <span>
@@ -454,7 +489,7 @@ seconds since the Unix epoch in 1-second resolution.</dd>
 <dd></dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -protected">
-    <a href="classes/PhpAmqpLib-Wire-AMQPReader.html#method_rawread">rawread()</a>
+    <a href="classes/PhpAmqpLib-Wire-AMQPIOReader.html#method_rawread">rawread()</a>
     <span>
                         &nbsp;: string    </span>
 </dt>
@@ -474,6 +509,13 @@ seconds since the Unix epoch in 1-second resolution.</dd>
 </dt>
 <dd></dd>
 
+            <dt class="phpdocumentor-table-of-contents__entry -method -protected">
+    <a href="classes/PhpAmqpLib-Wire-AMQPIOReader.html#method_wait">wait()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd>Waits until some data is retrieved from the socket.</dd>
+
             <dt class="phpdocumentor-table-of-contents__entry -method -private">
     <a href="classes/PhpAmqpLib-Wire-AMQPReader.html#method_readSignedLong">readSignedLong()</a>
     <span>
@@ -489,7 +531,7 @@ seconds since the Unix epoch in 1-second resolution.</dd>
     <section class="phpdocumentor-constants">
         <h3 class="phpdocumentor-elements__header" id="constants">
             Constants
-            <a href="classes/PhpAmqpLib-Wire-AMQPReader.html#constants" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/PhpAmqpLib-Wire-AMQPIOReader.html#constants" class="headerlink"><i class="fas fa-link"></i></a>
         </h3>
                     <article class="phpdocumentor-element -constant -public ">
     <h4 class="phpdocumentor-element__name" id="constant_BIT">
@@ -785,7 +827,7 @@ seconds since the Unix epoch in 1-second resolution.</dd>
     <section class="phpdocumentor-properties">
         <h3 class="phpdocumentor-elements__header" id="properties">
             Properties
-            <a href="classes/PhpAmqpLib-Wire-AMQPReader.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/PhpAmqpLib-Wire-AMQPIOReader.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
         </h3>
                     <article
         class="
@@ -947,27 +989,143 @@ seconds since the Unix epoch in 1-second resolution.</dd>
     
 
 </article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_timeout">
+        $timeout
+        <a href="classes/PhpAmqpLib-Wire-AMQPIOReader.html#property_timeout" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="PhpAmqpLib/Wire/AMQPIOReader.php"><a href="files/phpamqplib-wire-amqpioreader.html"><abbr title="PhpAmqpLib/Wire/AMQPIOReader.php">AMQPIOReader.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">19</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+        <span class="phpdocumentor-signature__type">int|float|null</span>
+    <span class="phpdocumentor-signature__name">$timeout</span>
+    </code>
+
+    
+    
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_io">
+        $io
+        <a href="classes/PhpAmqpLib-Wire-AMQPIOReader.html#property_io" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="PhpAmqpLib/Wire/AMQPIOReader.php"><a href="files/phpamqplib-wire-amqpioreader.html"><abbr title="PhpAmqpLib/Wire/AMQPIOReader.php">AMQPIOReader.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">16</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+        <span class="phpdocumentor-signature__type"><a href="classes/PhpAmqpLib-Wire-IO-AbstractIO.html"><abbr title="\PhpAmqpLib\Wire\IO\AbstractIO">AbstractIO</abbr></a></span>
+    <span class="phpdocumentor-signature__name">$io</span>
+    </code>
+
+    
+    
+    
+
+</article>
             </section>
 
             <section class="phpdocumentor-methods">
         <h3 class="phpdocumentor-elements__header" id="methods">
             Methods
-            <a href="classes/PhpAmqpLib-Wire-AMQPReader.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/PhpAmqpLib-Wire-AMQPIOReader.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
         </h3>
                     <article
         class="phpdocumentor-element
             -method
             -public
-                        -abstract                                "
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method___construct">
+        __construct()
+        <a href="classes/PhpAmqpLib-Wire-AMQPIOReader.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="PhpAmqpLib/Wire/AMQPIOReader.php"><a href="files/phpamqplib-wire-amqpioreader.html"><abbr title="PhpAmqpLib/Wire/AMQPIOReader.php">AMQPIOReader.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">21</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type"><a href="classes/PhpAmqpLib-Wire-IO-AbstractIO.html"><abbr title="\PhpAmqpLib\Wire\IO\AbstractIO">AbstractIO</abbr></a>&nbsp;</span><span class="phpdocumentor-signature__argument__name">$io</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$timeout</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$io</span>
+                : <span class="phpdocumentor-signature__argument__return-type"><a href="classes/PhpAmqpLib-Wire-IO-AbstractIO.html"><abbr title="\PhpAmqpLib\Wire\IO\AbstractIO">AbstractIO</abbr></a></span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$timeout</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
 >
     <h4 class="phpdocumentor-element__name" id="method_close">
         close()
-        <a href="classes/PhpAmqpLib-Wire-AMQPReader.html#method_close" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/PhpAmqpLib-Wire-AMQPIOReader.html#method_close" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="PhpAmqpLib/Wire/AMQPReader.php"><a href="files/phpamqplib-wire-amqpreader.html"><abbr title="PhpAmqpLib/Wire/AMQPReader.php">AMQPReader.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="PhpAmqpLib/Wire/AMQPIOReader.php"><a href="files/phpamqplib-wire-amqpioreader.html"><abbr title="PhpAmqpLib/Wire/AMQPIOReader.php">AMQPIOReader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">23</span>
+    <span class="phpdocumentor-element-found-in__line">27</span>
 
     </aside>
 
@@ -975,7 +1133,7 @@ seconds since the Unix epoch in 1-second resolution.</dd>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-    <span class="phpdocumentor-signature__abstract">abstract</span>            <span class="phpdocumentor-signature__name">close</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                <span class="phpdocumentor-signature__name">close</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     
     
@@ -983,6 +1141,38 @@ seconds since the Unix epoch in 1-second resolution.</dd>
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">void</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_getTimeout">
+        getTimeout()
+        <a href="classes/PhpAmqpLib-Wire-AMQPIOReader.html#method_getTimeout" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="PhpAmqpLib/Wire/AMQPIOReader.php"><a href="files/phpamqplib-wire-amqpioreader.html"><abbr title="PhpAmqpLib/Wire/AMQPIOReader.php">AMQPIOReader.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">35</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">getTimeout</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">float|int|mixed|null</span></code>
+
+    
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">float|int|mixed|null</span>
             &mdash;
         
     
@@ -1723,6 +1913,49 @@ seconds since the Unix epoch in 1-second resolution.</p>
                     <article
         class="phpdocumentor-element
             -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_setTimeout">
+        setTimeout()
+        <a href="classes/PhpAmqpLib-Wire-AMQPIOReader.html#method_setTimeout" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="PhpAmqpLib/Wire/AMQPIOReader.php"><a href="files/phpamqplib-wire-amqpioreader.html"><abbr title="PhpAmqpLib/Wire/AMQPIOReader.php">AMQPIOReader.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">45</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Sets the timeout (second)</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">setTimeout</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int|float|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$timeout</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$timeout</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int|float|null</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
             -protected
                                                         "
 >
@@ -1974,26 +2207,25 @@ seconds since the Unix epoch in 1-second resolution.</p>
         class="phpdocumentor-element
             -method
             -protected
-                        -abstract                                "
+                                                        "
 >
     <h4 class="phpdocumentor-element__name" id="method_rawread">
         rawread()
-        <a href="classes/PhpAmqpLib-Wire-AMQPReader.html#method_rawread" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/PhpAmqpLib-Wire-AMQPIOReader.html#method_rawread" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="PhpAmqpLib/Wire/AMQPReader.php"><a href="files/phpamqplib-wire-amqpreader.html"><abbr title="PhpAmqpLib/Wire/AMQPReader.php">AMQPReader.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="PhpAmqpLib/Wire/AMQPIOReader.php"><a href="files/phpamqplib-wire-amqpioreader.html"><abbr title="PhpAmqpLib/Wire/AMQPIOReader.php">AMQPIOReader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">25</span>
+    <span class="phpdocumentor-element-found-in__line">56</span>
 
     </aside>
 
     
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">protected</span>
-    <span class="phpdocumentor-signature__abstract">abstract</span>            <span class="phpdocumentor-signature__name">rawread</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$n</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+                <span class="phpdocumentor-signature__name">rawread</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$n</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
 
-        <section class="phpdocumentor-description"></section>
-
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
@@ -2001,12 +2233,33 @@ seconds since the Unix epoch in 1-second resolution.</p>
                 : <span class="phpdocumentor-signature__argument__return-type">int</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
+                
             </dd>
             </dl>
 
     
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\RuntimeException">RuntimeException</abbr></span>
+                                                            
+                                             
+                                    </dd>
+                            <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><a href="classes/PhpAmqpLib-Exception-AMQPDataReadException.html"><abbr title="\PhpAmqpLib\Exception\AMQPDataReadException">AMQPDataReadException</abbr></a>|<a href="classes/PhpAmqpLib-Exception-AMQPNoDataException.html"><abbr title="\PhpAmqpLib\Exception\AMQPNoDataException">AMQPNoDataException</abbr></a>|<a href="classes/PhpAmqpLib-Exception-AMQPIOException.html"><abbr title="\PhpAmqpLib\Exception\AMQPIOException">AMQPIOException</abbr></a></span>
+                                                            
+                                             
+                                    </dd>
+                        </dl>
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">string</span>
@@ -2076,6 +2329,67 @@ seconds since the Unix epoch in 1-second resolution.</p>
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">int</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_wait">
+        wait()
+        <a href="classes/PhpAmqpLib-Wire-AMQPIOReader.html#method_wait" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="PhpAmqpLib/Wire/AMQPIOReader.php"><a href="files/phpamqplib-wire-amqpioreader.html"><abbr title="PhpAmqpLib/Wire/AMQPIOReader.php">AMQPIOReader.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">83</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Waits until some data is retrieved from the socket.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+                <span class="phpdocumentor-signature__name">wait</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+        <section class="phpdocumentor-description"><p>AMQPTimeoutException can be raised if the timeout is set</p>
+</section>
+
+    
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><a href="classes/PhpAmqpLib-Exception-AMQPTimeoutException.html"><abbr title="\PhpAmqpLib\Exception\AMQPTimeoutException">AMQPTimeoutException</abbr></a></span>
+                                                            
+                                                 <section class="phpdocumentor-description"><p>when timeout is set and no data received</p>
+</section>
+
+                                    </dd>
+                            <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><a href="classes/PhpAmqpLib-Exception-AMQPNoDataException.html"><abbr title="\PhpAmqpLib\Exception\AMQPNoDataException">AMQPNoDataException</abbr></a></span>
+                                                            
+                                                 <section class="phpdocumentor-description"><p>when no data is ready to read from IO</p>
+</section>
+
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
             &mdash;
         
     
@@ -2190,7 +2504,7 @@ seconds since the Unix epoch in 1-second resolution.</p>
 </section>
             </div>
         </div>
-        <a href="classes/PhpAmqpLib-Wire-AMQPReader.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+        <a href="classes/PhpAmqpLib-Wire-AMQPIOReader.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
     </main>
 
